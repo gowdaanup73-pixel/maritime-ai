@@ -4,12 +4,10 @@ Predict. Optimize. Charter Smarter.
 """
 import os
 import sys
-
 # Ensure backend root is on sys.path for direct module resolution
 backend_dir = os.path.dirname(os.path.abspath(__file__))
 if backend_dir not in sys.path:
     sys.path.insert(0, backend_dir)
-
 import logging
 from contextlib import asynccontextmanager
 from typing import Optional, List, Dict, Any
@@ -17,7 +15,6 @@ from fastapi import FastAPI, HTTPException, Query, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
-
 from schemas.freight import FreightPredictionRequest, FreightPredictionResponse
 from schemas.demand import DemandPredictionRequest, DemandPredictionResponse
 from schemas.vessel import VesselItem, VesselPositionResponse, VesselFleetStatusResponse
@@ -76,7 +73,6 @@ from services.booking_service import (
     reschedule_charter_booking,
     cancel_charter_booking,
 )
-
 from services.freight_service import predict_freight, get_freight_model
 from services.demand_service import predict_demand, get_demand_model
 from services.vessel_service import get_all_vessels, get_vessel_by_id, get_vessel_position, get_vessels_status
