@@ -40,6 +40,7 @@ const COAL_GRADES = [
   'Anthracite',
 ];
 
+
 const PRESETS = [
   {
     label: '50 Tons Coal (Local Spot Top-up via Truck)',
@@ -56,6 +57,8 @@ const PRESETS = [
     supplierName: 'East Coast Coal Terminal Stockyard',
     notes: 'Urgent spot parcel top-up to maintain emergency boiler buffer.',
   },
+
+  
   {
     label: '2,800 Tons Coal (Dedicated Rail Rake)',
     commodity: 'Coal',
